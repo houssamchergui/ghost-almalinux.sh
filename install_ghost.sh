@@ -33,12 +33,12 @@ fi
 
 # Installing prerequisites
 
-yum update -y
-yum upgrade -y
-yum install -y epel-release
-yum install -y ufw
-curl -sL https://rpm.nodesource.com/setup_16.x | sudo -E bash - &&
-yum install -y nginx gcc-c++ make nodejs
+apt-get update -y
+apt-get upgrade -y
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+apt-get install -y nodejs npm
+apt-get install -y nginx
+npm install -g npm@8.3.0
 npm install ghost-cli@latest -g
 
 echo ""
@@ -51,7 +51,7 @@ echo ""
 
 # adding nginx to UFW
 
-sudo ufw allow 'Nginx Full'
+ufw allow 'Nginx Full'
 
 # adding user
 
@@ -70,4 +70,4 @@ mkdir -p /var/www/$site
 chown u_ghost:u_ghost /var/www/$site
 chmod 775 -R /var/www/$site
 cd /var/www/$site
-su - u_ghost -c "ghost install"
+su u_ghost -c "ghost install"
