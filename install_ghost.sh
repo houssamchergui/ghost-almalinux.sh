@@ -2,8 +2,8 @@
 
 echo "              +---------------------------------------------+"
 echo "              |        Script For Ghost Installation        |"
-echo "              |     Prepared by : Fiverr.com/carbon_2019    |"
-echo "              |       Handed to : mehdiostlich              |"
+echo "              |        Maintained by : Hostarts             |"
+echo "              |        For production use only              |"
 echo "              +---------------------------------------------+"
 echo ""
 echo "[!] CAUTION : This script will create a admin user 'u_ghost' with the passwd you provide"
